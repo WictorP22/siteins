@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>AdminLTE 3 | Dashboard 2</title>
+
+  <!-- Google Font: Source Sans Pro -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="plugins/fontawesome-free/css/all.min.css">
+  <!-- overlayScrollbars -->
+  <link rel="stylesheet" href="plugins/overlayScrollbars/css/OverlayScrollbars.min.css">
+  <!-- Theme style -->
+  <link rel="stylesheet" href="dist/css/adminlte.min.css">
+    <!-- Daterange picker -->
+    <link rel="stylesheet" href="plugins/daterangepicker/daterangepicker.css">
+</head>
+<body class="dark-mode layout-top-nav">
+<div class="wrapper">
+
+{% extends 'base.html' %}
+
+{% block header %}
+  <h1>{% block title %}Documentos{% endblock %}</h1>
+{% endblock %}
+
+{% block content %}
+    <!-- Main content -->
+    <section class="content-wrapper">
+      <div class="content">
+        <div class="container">
+
+            <h3 class="mt-4 mb-4">Anúncios e atas</h3>
+            <div class="row">
+                <div class="col-md-3">
+                    <div class="card">
+                        <div class="card-header">
+                          <h3 class="card-title">Filtros</h3>
+
+                          <div class="card-tools">
+                            <button type="button" class="btn btn-tool" data-card-widget="collapse">
+                              <i class="fas fa-minus"></i>
+                            </button>
+                          </div>
+                        </div>
+                        <div class="card-body p-0">
+                          <ul class="nav nav-pills flex-column">
+                            <li class="nav-item">
+                              <a href="#" class="nav-link">
+                                <i class="far fa-circle text-danger"></i>
+                                Anúncios
+                              </a>
+                            </li>
+                            <li class="nav-item">
+                              <a href="#" class="nav-link">
+                                <i class="far fa-circle text-warning"></i> Informativos rápidos
+                              </a>
+                            </li>
+                            <li class="nav-item">
+                              <a href="#" class="nav-link">
+                                <i class="far fa-circle text-primary"></i>
+                                Atas
+                              </a>
+                            </li>
+                          </ul>
+                        </div>
+                        <!-- /.card-body -->
+                      </div>
+                </div>
+                <div class="col-md-9">
+                    <div class="card card-warning card-outline">
+                        <div class="card-header">
+                          <h3 class="card-title">Pesquisa</h3>
+
+                          <div class="card-tools">
+                            <div class="input-group input-group-sm">
+                              <input type="text" class="form-control" placeholder="Nick do Instrutor Mail">
+                              <div class="input-group-append">
+                                <div class="btn btn-primary">
+                                  <i class="fas fa-Nick do Instrutor"></i>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <!-- /.card-tools -->
+                        </div>
+                        <!-- /.card-header -->
+                        <div class="card-body p-0">
+                          <div class="table-responsive mailbox-messages">
+                            <table class="table table-hover table-striped">
+                              <tbody>
+                              <tr>
+                                <td class="mailbox-star"><a href="#"><i class="far fa-circle text-primary"></i></a></td>
+                                <td class="mailbox-name"><a href="read-mail.html">Alexander Pierce</a></td>
+                                <td class="mailbox-subject"><b>AdminLTE 3.0 Issue</b> - Trying to find a solution to this problem...
+                                </td>
+                                <td class="mailbox-attachment"></td>
+                                <td class="mailbox-date">5 mins ago</td>
+                              </tr>
+                              <tr>
+                                <td class="mailbox-star"><a href="#"><i class="far fa-circle text-warning"></i></a></td>
+                                <td class="mailbox-name"><a href="read-mail.html">Alexander Pierce</a></td>
+                                <td class="mailbox-subject"><b>AdminLTE 3.0 Issue</b> - Trying to find a solution to this problem...
+                                </td>
+                                <td class="mailbox-attachment"><i class="fas fa-paperclip"></i></td>
+                                <td class="mailbox-date">28 mins ago</td>
+                              </tr>
+                              <tr>
+
+                                <td class="mailbox-star"><a href="#"><i class="far fa-circle text-danger"></i></a></td>
+                                <td class="mailbox-name"><a href="read-mail.html">Alexander Pierce</a></td>
+                                <td class="mailbox-subject"><b>AdminLTE 3.0 Issue</b> - Trying to find a solution to this problem...
+                                </td>
+                                <td class="mailbox-attachment"><i class="fas fa-paperclip"></i></td>
+                                <td class="mailbox-date">11 hours ago</td>
+                              </tr>
+                              <tr>
+                                <td class="mailbox-star"><a href="#"><i class="far fa-circle text-danger"></i></a></td>
+                                <td class="mailbox-name"><a href="read-mail.html">Alexander Pierce</a></td>
+                                <td class="mailbox-subject"><b>AdminLTE 3.0 Issue</b> - Trying to find a solution to this problem...
+                                </td>
+                                <td class="mailbox-attachment"></td>
+                                <td class="mailbox-date">15 hours ago</td>
+                              </tr>
+                              </tbody>
+                            </table>
+                            <!-- /.table -->
+                          </div>
+                          <!-- /.mail-box-messages -->
+                        </div>
+                      </div>
+                </div>
+            </div>
+
+
+        </div>
+      </div><!--/. container-fluid -->
+    </section>
+    <!-- /.content -->
+  </div>
+  <!-- /.content-wrapper -->
+{{ super() }}
+{%- endblock content %}

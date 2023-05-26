@@ -1,0 +1,74 @@
+    <section class="content">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-12">
+            <div class="card">
+              <div class="card-header">
+                <h3 class="card-title">Relatório de aulas</h3>
+
+                <div class="card-tools">
+                  <div class="input-group input-group-sm" style="width: 150px;">
+                    <input type="text" name="table_search" class="form-control float-right" placeholder="Search">
+
+                    <div class="input-group-append">
+                      <button type="submit" class="btn btn-default">
+                        <i class="fas fa-search"></i>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- /.card-header -->
+              <div class="card-body table-responsive p-0" style="height: 300px;">
+                <table class="table table-head-fixed text-nowrap">
+                  <thead>
+                    <tr>
+                      <th>ID</th>
+                      <th>Início</th>
+                      <th>Término</th>
+                      <th>Curso</th>
+                      <th>Instrutor</th>
+                      <th>Presentes</th>
+                      <th>Aprovados</th>
+                      <th>Comentários</th>
+                    </tr>
+                  </thead>
+                  <tbody id="relatorios">
+
+                  </tbody>
+                </table>
+              </div>
+              <!-- /.card-body -->
+            </div>
+            <!-- /.card -->
+          </div>
+        </div>
+        <!-- /.row -->
+      </div><!-- /.container-fluid -->
+    </section>
+<script>
+
+$SCRIPT_ROOT = {{ request.script_root|tojson }};
+$(document).ready(function(){
+  var relatorio =
+    $.getJSON($SCRIPT_ROOT + '/_relatorios',
+     function(data) {
+        for(i = 0; i < data.length; i++) {
+        var comentario, aprovados;
+        if(data[i][7] == undefined) {
+          comentario = "";
+        }else {
+          comentario = data[i][7]
+        }
+        if(data[i][6] == undefined) {
+          aprovados = "";
+        }else {
+          aprovados = data[i][6];
+        }
+          $("#relatorios").append('<tr><td>'+data[i][0]+'</td><td>'+data[i][1]+'</td><td>'+data[i][2]+'</td><td>'+data[i][3]+'</td><td>'+data[i][4]+'</td><td>'+data[i][5]+'</td><td>'+data[i][6]+'</td><td>'+comentario+'</td></tr>');
+        }
+     });
+
+
+});
+</script>

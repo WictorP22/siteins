@@ -1,0 +1,578 @@
+{% extends 'base.html' %}
+
+{% block header %}
+  <h1>{% block title %}{{instrutor}}{% endblock %}</h1>
+{% endblock %}
+
+{% block content %}
+<!-- Main content -->
+    <section class="content-wrapper">
+      <div class="content">
+        <div class="container">
+
+            <h3 class="mt-4 mb-4"><b>{{dados.Nome}}</b> - Perfil</h3>
+            <div class="row">
+                <div class="col-md-3">
+
+                  <!-- Profile Image -->
+                  <div class="card card-primary card-outline">
+                    <div class="card-body box-profile">
+                      <div class="text-center">
+                        <small><i id="online" class="float-right fa-regular fa-solid fa-circle text-success"></i></small>
+                        <img class=" img-fluid"
+                             src="https://www.habbo.com.br/habbo-imaging/avatarimage?img_format=png&user={{dados.Nome}}&direction=2&head_direction=3&size=l&action=std"
+                             alt="User profile picture">
+                      </div>
+
+                      <h3 class="text-center">{{dados.Nome}}</h3>
+
+                      <p class="text-muted text-center">{{dados.Habbo.Missão}}</p>
+
+                      <ul class="list-group list-group-unbordered mb-3">
+                        <li class="list-group-item">
+                          <b>Cargo</b> <span class="float-right badge badge-primary">{{dados.Planilha[0][0]}}</span>
+                        </li>
+                        <li class="list-group-item">
+                          <b>TAG</b> <span class="float-right badge badge-primary">WictorP2 - 17 Mai 2023 [CAP]</span>
+                        </li>
+                        <li class="list-group-item">
+                            <b>Tempo de CIA</b> <span id="tempo" class="float-right badge badge-primary">-</span>
+                        </li>
+                        <li class="list-group-item">
+                            <b>Situação</b> <span id="ativo" class="float-right badge badge-primary">Ativo</span>
+                        </li>
+                        <li class="list-group-item">
+                          <b>Possuí emblema?</b> <span id='emblema' class="float-right badge badge-success"><i class="fas fa-check"></i></span>
+                        </li>
+                        <li class="list-group-item">
+                          <b>Perfil</b> <span id="visi" class="float-right badge badge-success"><i class="fas fa-check"></i></span>
+                        </li>
+                      </ul>
+                    </div>
+                    <!-- /.card-body -->
+                  </div>
+                  <!-- /.card -->
+
+
+                </div>
+                <!-- /.col -->
+                <div class="col-md-7">
+                  <div class="card">
+                    <div class="card-header p-2">
+                      <ul class="nav nav-pills">
+                        <li class="nav-item"><a class="nav-link active" href="#historico" data-toggle="tab">Histórico</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#avaliacoes" data-toggle="tab">Avaliações</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#infracoes" data-toggle="tab">Infrações</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#projetos" data-toggle="tab">Projetos</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#sobre" data-toggle="tab">Sobre mim</a></li>
+                      </ul>
+                    </div><!-- /.card-header -->
+                    <div class="card-body">
+
+
+                      <!-- ./tab-pane historico -->
+                      <div class="tab-content">
+                        <div class="active tab-pane" id="historico">
+
+                        </div>
+                        <!-- /.tab-pane Histórico -->
+
+
+                        <!-- /.tab-pane Avaliação -->
+                        <div class="tab-pane" id="avaliacoes">
+
+                        </div>
+                        <!-- /.tab-pane Avaliações -->
+
+
+                        <!-- /.tab-pane Infrações -->
+                        <div class="tab-pane" id="infracoes">
+                            <table class="table table-bordered">
+                                <thead>
+                                  <tr>
+                                    <th style="width: 10px">#</th>
+                                    <th>Data</th>
+                                    <th>Infração</th>
+                                    <th>Gravidade</th>
+                                    <th>Autor</th>
+                                  </tr>
+                                </thead>
+                                <tbody>
+                                  <tr>
+                                    <td>1.</td>
+                                    <td>24/05/2023</td>
+                                    <td>Postagem incorreta</td>
+                                    <td class="text-primary">Gravidade I</td>
+                                    <td>LoremIpsum</td>
+                                  </tr>
+                                  <tr>
+                                    <td>1.</td>
+                                    <td>24/05/2023</td>
+                                    <td>Postagem incorreta</td>
+                                    <td class="text-warning">Gravidade II</td>
+                                    <td>LoremIpsum</td>
+                                  </tr>
+                                  <tr>
+                                    <td>1.</td>
+                                    <td>24/05/2023</td>
+                                    <td>Postagem incorreta</td>
+                                    <td class="text-danger">Gravidade III</td>
+                                    <td>LoremIpsum</td>
+                                  </tr>
+                                </tbody>
+                              </table>
+                        </div>
+                        <!-- /.tab-pane Infrações -->
+
+
+                        <!-- /.tab-pane Projetos -->
+                        <div class="tab-pane" id="projetos">
+                          <table class="table projects">
+                            <thead>
+                                <tr>
+                                    <th style="width: 1%">
+                                        #
+                                    </th>
+                                    <th>
+                                        Data
+                                    </th>
+                                    <th style="width: 15%">
+                                        Equipe
+                                    </th>
+                                    <th>
+                                        Modalidade
+                                    </th>
+                                    <th>
+                                      Tema
+                                    </th>
+                                    <th class="text-center">
+                                        Status
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody id="listaProjetos">
+
+                            </tbody>
+                        </table>
+                      </div>
+                      <!-- /.tab-pane Projetos -->
+
+
+
+                      <!-- /.tab-pane sobre -->
+                      <div class="tab-pane" id="sobre">
+                        <div class="card-body p-0">
+                          <strong><i class="fa-solid fa-timeline"></i> História</strong>
+
+                          <p class="text-muted">
+                            {{dados.História.Hist}}
+                          </p>
+
+                          <hr>
+
+                          <strong><i class="fas fa-list-check mr-1"></i> Contribuições e Projetos</strong>
+
+                          <p class="text-muted">
+                            {{dados.História.Conquistas}}
+                          </p>
+
+                          <hr>
+
+                          <strong><i class="fa-regular fa-comment-dots"></i> Mensagem aos novatos</strong>
+
+                          <p class="text-muted">
+                            {{dados.História.Novatos}}
+                          </p>
+
+                          <hr>
+
+                          <strong><i class="fa-solid fa-users-rectangle"></i> Sub-grupos que fez parte</strong>
+
+                          <p class="text-muted">
+                            {{dados.História.SubGrupos}}
+                          </p>
+
+                          <hr>
+
+                          <strong><i class="fa-solid fa-ranking-star"></i> Conquistas</strong>
+
+                          <p class="text-muted">
+                            {{dados.História.Conquistas}}
+                          </p>
+                        </div>
+                    </div>
+                    <!-- /.tab-pane sobre -->
+
+
+
+                      </div>
+                      <!-- /.tab-content -->
+                    </div><!-- /.card-body -->
+                  </div>
+                  <!-- /.card -->
+                </div>
+                <!-- /.col -->
+
+                <div class="col-md-2">
+                  <div class="card">
+                    <div class="card-header">
+                      <h3 class="card-title">Meta parcial</h3>
+                    </div>
+                    <!-- /.card-header -->
+                    <div class="card-body">
+                      <div class="row">
+                        <div class="col-md-12">
+                          <div class="chart-responsive"><div class="chartjs-size-monitor"><div class="chartjs-size-monitor-expand"><div class=""></div></div><div class="chartjs-size-monitor-shrink"><div class=""></div></div></div>
+                            <canvas id="pieChart" height="189" width="378" style="display: block; width: 378px; height: 189px;" class="chartjs-render-monitor"></canvas>
+                          </div>
+                          <!-- ./chart-responsive -->
+                        </div>
+                      </div>
+                      <!-- /.row -->
+                    </div>
+                    <!-- /.card-body -->
+                    <div class="card-body">
+                        <ul class="list-group list-group-unbordered mb-3">
+                            <li class="list-group-item">
+                              CFSd <span class="float-right badge bg-orange text-white">{{dados.Parcial.CFSd}}</span>
+                            </li>
+                            <li class="list-group-item">
+                                CFC1 <span class="float-right badge bg-navy text-white">{{dados.Parcial.CFC1}}</span>
+                            </li>
+                            <li class="list-group-item">
+                                CFC <span class="float-right badge bg-teal text-white">{{dados.Parcial.CFC2}}</span>
+                            </li>
+                            <li class="list-group-item">
+                                CAP <span class="float-right badge badge-info">{{dados.Parcial.CAP}}</span>
+                            </li>
+                            <li class="list-group-item">
+                                <b>Pontos</b> <span class="float-right badge badge-success">{{dados.Parcial.Pontos}}</span>
+                            </li>
+                          </ul>
+                    </div>
+                    <!-- /.footer -->
+                  </div>
+                </div>
+              </div>
+              <!-- /.row -->
+
+
+        </div>
+      </div><!--/. container-fluid -->
+    </section>
+    <!-- /.content -->
+  </div>
+  <!-- /.content-wrapper -->
+
+<script>
+      var pieChartCanvas = $('#pieChart').get(0).getContext('2d')
+  var pieData = {
+    labels: [
+      'CFSd',
+      'CFC1',
+      'CFC2',
+      'CAP'
+    ],
+    datasets: [
+      {
+        data: [{{dados.Parcial.CFSd}}, {{dados.Parcial.CFC1}}, {{dados.Parcial.CFC2}}, {{dados.Parcial.CAP}}],
+        backgroundColor: ['#fd7e14', '#001f3f', '#20c997', '#17a2b8']
+      }
+    ]
+  }
+  var pieOptions = {
+    legend: {
+      display: false
+    }
+  }
+  // Create pie or douhnut chart
+  // You can switch between pie and douhnut using the method below.
+  // eslint-disable-next-line no-unused-vars
+  var pieChart = new Chart(pieChartCanvas, {
+    type: 'doughnut',
+    data: pieData,
+    options: pieOptions
+  })
+
+
+</script>
+<script>
+  $(document).ready(function(){
+	  // códigos jQuery a serem executados quando a página carregar
+	  var visi = '{{dados.Habbo.Visibilidade}}';
+	  if(visi != "True") {
+      $("#visi").removeClass('badge-success').addClass('badge-danger').html('<i class="fa-solid fa-x"></i>');
+	  }
+	  var emblema = '{{dados.Habbo.Grupo}}';
+	  if(emblema != 'true') {
+	    $("#emblema").removeClass('badge-success').addClass('badge-danger').html('<i class="fa-solid fa-x"></i>');
+	  }
+
+    function trataPlan(str) {
+      var palavra = str.slice(6, -6);
+      palavra = palavra.split('&#34;, &#34;');
+      return palavra;
+    }
+
+  function converteMes(data) {
+    var separa = data.split(" ");
+    var dia = separa[0];
+    var mes = separa[1];
+    var ano = separa[2];
+    var retorno = mes == 'jan.' ? '01' : mes == 'fev.' ? '02' : mes == 'mar.' ? '03' : mes == 'abr.' ? '04' : mes == 'mai.' ? '05' : mes == 'jun.' ? '06' : mes == 'jul.' ? '07' : mes == 'ago.' ? '08' : mes == 'set.' ? '09' : mes == 'out.' ? '10' : mes == 'nov.' ? '11' : mes == 'dez.' ? '12' : null;
+    var novaData = retorno == null ? 'Data invalida' : dia+"/"+retorno+"/"+ano;
+    return novaData;
+  }
+
+	  var habboPlan = '{{dados.Planilha[0][2]}}';
+    if(habboPlan == '-') {
+	    $("#ativo").removeClass('badge-primary').addClass('badge-warning').text('Inativo');
+    }else {
+      $("#tempo").text(moment(converteMes(habboPlan), "DD/MM/AAAA").locale('pt-br').fromNow());
+    }
+
+	  if('{{dados.Habbo.Online}}' == 'False') {
+	    $("#online").removeClass('text-success').addClass('text-danger');
+	  }
+
+
+  var historico = '{{ hist }}';
+  function unescape(texto) {
+    var novoTexto = texto.replace(/&#34;/g,`"`);
+    novoTexto.replace(/&#39;/g, '\\');
+    var teste = novoTexto.replace(/(\r\n|\n|\r)/gm, "");
+    return teste;
+  }
+
+  var objHistorico = JSON.parse(unescape(historico));
+
+  objHistorico.forEach(function(meta) {
+
+    var icon, classe;
+    if(meta[7] == '[A]') {
+        classe = 'bg-success';
+        icon = '<i class="fas fa-check-double"></i>';
+        // Bateu meta
+    }else if(meta[7] == '[B]') {
+        // Não bateu meta
+        classe = 'bg-danger';
+        icon = '<i class="fa-solid fa-xmark"></i>';
+    }else if(meta[7] == '[L]') {
+        // Licença
+        classe = 'bg-warning';
+        icon = '<i class="fa-solid fa-mask-face"></i>';
+    }else if(meta[7] == '[LR]') {
+        // retorno da l
+        classe = 'bg-info';
+        icon = '<i class="fa-solid fa-hand-back-fist"></i>';
+    }else if(meta[7] == '[NM]') {
+        // membro novo
+        classe = 'bg-info';
+        icon = '<i class="fa-solid fa-baby"></i>';
+    }else {
+
+    }
+    $("#historico").append(`
+        <div class="info-box ${classe}">
+            <span class="info-box-icon">${icon}</span>
+            <div class="info-box-content">
+                <span class="info-box-text">${meta[8]}</span>
+                <span class="info-box-number">${meta[5]} pontos</span>
+                <div class="progress">
+                    <div class="progress-bar" style="width: 100%"></div>
+                </div>
+                <span class="progress-description">
+                    <span class="badge badge-light">${meta[1]} CFsd</span>
+                    <span class="badge badge-light">${meta[2]} CFC1</span>
+                    <span class="badge badge-light">${meta[3]} CFC2</span>
+                    <span class="badge badge-light">${meta[4]} CAP</span>
+                </span>
+            </div>
+        </div>
+    `);
+  });
+
+  var avs = '{{avs}}';
+  var objAvs = JSON.parse(unescape(avs));
+
+  function separaAvs(texto) {
+    var tipos = texto.split(',');
+    var retorno = '';
+    tipos.forEach(function(coment) {
+        retorno = coment != undefined ? retorno+`<li class="list-group-item">${coment}</li>` : '';
+    });
+    return retorno;
+  }
+
+  objAvs.forEach(function(av) {
+    var classe = av[11] == 'Péssima' ? 'bg-danger' : av[11] == 'Ruim' ? 'bg-maroon' : av[11] == 'Regular' ? 'bg-primary' : av[11] == 'Boa' ? 'bg-olive' : av[11] == 'Excelente' ? 'bg-success' : null;
+
+    av[5].split('.,').forEach(function(motivos) {  });
+
+    $("#avaliacoes").append(`
+                            <div class="card card-widget widget-user-2 collapsed-card">
+                                <!-- Add the bg color to the header using any of the bg-* classes -->
+                                <div class="widget-user-header ${classe}">
+                                  <div class="widget-user-image">
+                                    <img class="" src="https://www.habbo.com.br/habbo-imaging/avatarimage?img_format=png&user=${av[1]}&direction=2&head_direction=3&size=l&action=std" alt="User Avatar">
+                                  </div>
+                                  <!-- /.widget-user-image -->
+                                  <h3 class="widget-user-username">${av[1]}</h3>
+                                  <h5 class="widget-user-desc"><span class="badge badge-light">${av[11]}</span></h5>
+                                  <div class="card-tools">
+                                    <button type="button" class="badge badge-light btn" data-card-widget="collapse"><i class="fas fa-plus"></i>
+                                    </button>
+                                </div>
+                                </div>
+                                <div class="card-body pb-0">
+                                    <div class="card-header">
+                                        <h3 class="card-title">Dados da avaliação</h3>
+                                    </div>
+                                    <div class="row mt-3">
+                                        <div class="col-md-6">
+                                            <ul class="list-group">
+                                                <li class="list-group-item">
+                                                    <b>Data e hora</b> <span class="float-right badge badge-primary">${av[0]}</span>
+                                                </li>
+                                                <li class="list-group-item">
+                                                    <b>Prints</b> <span class="float-right badge badge-primary">${av[12]}</span>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <ul class="list-group">
+                                                <li class="list-group-item">
+                                                    <b>Avaliador</b> <span class="float-right badge badge-primary">${av[1]}</span>
+                                                </li>
+                                                <li class="list-group-item">
+                                                    <b>Conta Utilizada</b> <span class="float-right badge badge-primary">${av[2]}</span>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="row mb-0">
+                                        <div class="card-body">
+                                            <ul class="list-group">
+                                                <li class="list-group"><b>Comentário</b></li>
+                                                <li class="list-group">${av[10]}</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <!-- Corredor -->
+                                    <div class="card-body pt-0 card-outline card-primary ">
+                                        <div class="card-header">
+                                            <h3 class="card-title">Avaliação no Corredor</h3>
+                                        </div>
+                                        <div class="row mt-3">
+                                            <div class="col-md-12">
+                                                <ul class="list-group">
+                                                    ${separaAvs(av[5])}
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- Fim corredor -->
+
+                                    <!-- Aula -->
+                                    <div class="card-body pt-0 card-outline card-primary ">
+                                        <div class="card-header">
+                                            <h3 class="card-title">Avaliação no Corredor</h3>
+                                        </div>
+                                        <div class="row mt-3">
+                                            <div class="col-md-12">
+                                                <ul class="list-group">
+                                                    ${separaAvs(av[6])}
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- Fim Aula -->
+
+                                    <!-- teste teórico -->
+                                    <div class="card-body pt-0 card-outline card-primary ">
+                                        <div class="card-header">
+                                            <h3 class="card-title">Avaliação no Corredor</h3>
+                                        </div>
+                                        <div class="row mt-3">
+                                            <div class="col-md-12">
+                                                <ul class="list-group">
+                                                    ${separaAvs(av[7])}
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- Fim teste teórico -->
+
+                                    <!-- comandos -->
+                                    <div class="card-body pt-0 card-outline card-primary ">
+                                        <div class="card-header">
+                                            <h3 class="card-title">Avaliação no Corredor</h3>
+                                        </div>
+                                        <div class="row mt-3">
+                                            <div class="col-md-12">
+                                                <ul class="list-group">
+                                                    ${separaAvs(av[8])}
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- Fim comandos -->
+
+                                    <!-- finalização -->
+                                    <div class="card-body pt-0 card-outline card-primary ">
+                                        <div class="card-header">
+                                            <h3 class="card-title">Avaliação no Corredor</h3>
+                                        </div>
+                                        <div class="row mt-3">
+                                            <div class="col-md-12">
+                                                <ul class="list-group">
+                                                    ${separaAvs(av[9])}
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- Fim finalização -->
+                                </div>
+    `);
+  });
+
+  var projetos = '{{projetos}}';
+  var projetosObj = JSON.parse(unescape(projetos));
+  var projetosObj = projetosObj.reverse();
+
+  for(projeto in projetosObj) {
+    var veredito = projetosObj[projeto][5] == 'Reprovado' ? `<span class="badge badge-danger">Reprovado</span>` : projetosObj[projeto][5] == 'Aprovado' ? `<span class="badge badge-success">Aprovado</span>` : projetosObj[projeto][5] == 'Aprovado com alterações' ? `<span class="badge badge-warning">Aprovado com</br> alterações</span>` : '';
+    $("#listaProjetos").append(`
+      <tr>
+                                    <td>
+                                        ${projetosObj[projeto][2]}
+                                    </td>
+                                    <td>
+                                        <small>
+                                          ${projetosObj[projeto][0]}
+                                        </small>
+                                    </td>
+                                    <td>
+                                        <ul class="list-inline">
+                                            <li class="list-inline-item p-1">
+                                                <img alt="Avatar" class="table-avatar bg-warning img-project" src="https://www.habbo.com.br/habbo-imaging/avatarimage?img_format=png&user=${projetosObj[projeto][1]}&direction=2&head_direction=3&size=m&action=std">
+                                            </li>
+                                        </ul>
+                                    </td>
+                                    <td>
+                                        ${projetosObj[projeto][3]}
+                                    </td>
+                                    <td>
+                                        ${projetosObj[projeto][4]}
+                                    </td>
+                                    <td>
+                                      ${veredito}
+                                    </td>
+                                </tr>
+    `);
+  }
+ });
+</script>
+<!-- ./wrapper -->
+{{ super() }}
+{%- endblock content %}

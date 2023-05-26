@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>AdminLTE 3 | Dashboard 2</title>
+
+  <!-- Google Font: Source Sans Pro -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="plugins/fontawesome-free/css/all.min.css">
+  <!-- overlayScrollbars -->
+  <link rel="stylesheet" href="plugins/overlayScrollbars/css/OverlayScrollbars.min.css">
+  <!-- Theme style -->
+  <link rel="stylesheet" href="dist/css/adminlte.min.css">
+    <!-- Daterange picker -->
+    <link rel="stylesheet" href="plugins/daterangepicker/daterangepicker.css">
+</head>
+<body class="dark-mode layout-top-nav">
+<div class="wrapper">
+
+
+
+    <!-- Navbar -->
+    <nav class="main-header navbar navbar-expand-md navbar-dark navbar-dark">
+      <div class="container">
+        <a href="../../index3.html" class="navbar-brand">
+          <img src="https://lh4.googleusercontent.com/loUySLtqE6l5eCRNXMk-1pwZTxUaMaoOqgQgigySJW1zw9p76tigNEdVXuQNmApGELuL09THG64LusPAQTepYT0=w16383" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
+          <span class="brand-text font-weight-light">INS 2.0</span>
+        </a>
+  
+        <button class="navbar-toggler order-1" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+  
+        <div class="collapse navbar-collapse order-3" id="navbarCollapse">
+          <!-- Left navbar links -->
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a href="index3.html" class="nav-link">Início</a>
+            </li>
+            <li class="nav-item">
+              <a href="index3.html" class="nav-link">Documentos</a>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link">Contact</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a id="dropdownSubMenu1" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="nav-link dropdown-toggle">Dropdown</a>
+              <ul aria-labelledby="dropdownSubMenu1" class="dropdown-menu border-0 shadow">
+                <li><a href="#" class="dropdown-item">Some action </a></li>
+                <li><a href="#" class="dropdown-item">Some other action</a></li>
+  
+                <li class="dropdown-divider"></li>
+  
+                <!-- Level two dropdown-->
+                <li class="dropdown-submenu dropdown-hover">
+                  <a id="dropdownSubMenu2" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="dropdown-item dropdown-toggle">Hover for action</a>
+                  <ul aria-labelledby="dropdownSubMenu2" class="dropdown-menu border-0 shadow">
+                    <li>
+                      <a tabindex="-1" href="#" class="dropdown-item">level 2</a>
+                    </li>
+  
+                    <!-- Level three dropdown-->
+                    <li class="dropdown-submenu">
+                      <a id="dropdownSubMenu3" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="dropdown-item dropdown-toggle">level 2</a>
+                      <ul aria-labelledby="dropdownSubMenu3" class="dropdown-menu border-0 shadow">
+                        <li><a href="#" class="dropdown-item">3rd level</a></li>
+                        <li><a href="#" class="dropdown-item">3rd level</a></li>
+                      </ul>
+                    </li>
+                    <!-- End Level three -->
+  
+                    <li><a href="#" class="dropdown-item">level 2</a></li>
+                    <li><a href="#" class="dropdown-item">level 2</a></li>
+                  </ul>
+                </li>
+                <!-- End Level two -->
+              </ul>
+            </li>
+          </ul>
+        </div>
+  
+        <!-- Right navbar links -->
+        <ul class="order-1 order-md-3 navbar-nav navbar-no-expand ml-auto">
+          <!-- Notifications Dropdown Menu -->
+          <li class="nav-item dropdown">
+            <a class="nav-link" data-toggle="dropdown" href="#">
+              <i class="far fa-bell"></i>
+              <span class="badge badge-warning navbar-badge">15</span>
+            </a>
+            <div class="dropdown-menu dropdown-menu-lg dropdown-menu-right">
+              <span class="dropdown-header">15 Notifications</span>
+              <div class="dropdown-divider"></div>
+              <a href="#" class="dropdown-item">
+                <i class="fas fa-envelope mr-2"></i> 4 new messages
+                <span class="float-right text-muted text-sm">3 mins</span>
+              </a>
+              <div class="dropdown-divider"></div>
+              <a href="#" class="dropdown-item">
+                <i class="fas fa-users mr-2"></i> 8 friend requests
+                <span class="float-right text-muted text-sm">12 hours</span>
+              </a>
+              <div class="dropdown-divider"></div>
+              <a href="#" class="dropdown-item">
+                <i class="fas fa-file mr-2"></i> 3 new reports
+                <span class="float-right text-muted text-sm">2 days</span>
+              </a>
+              <div class="dropdown-divider"></div>
+              <a href="#" class="dropdown-item dropdown-footer">See All Notifications</a>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <!-- /.navbar -->
+
+
+
+    <!-- Main content -->
+    <section class="content-wrapper">
+      <div class="content">
+        <div class="container">
+        
+        <h3 class="mt-4 mb-4">Pódio parcial</h3>
+
+        <div class="row">
+            <div class="col-md-4" style="margin-top:1em;">
+                <!-- Widget: user widget style 2 -->
+                <div class="card card-widget widget-user-2">
+                  <!-- Add the bg color to the header using any of the bg-* classes -->
+                  <div class="widget-user-header bg-gray">
+                    <div class="widget-user-image">
+                      <img class="" src="https://www.habbo.com.br/habbo-imaging/avatarimage?img_format=png&user=WictorP2&direction=2&head_direction=3&size=l&action=std" alt="User Avatar">
+                    </div>
+                    <!-- /.widget-user-image -->
+                    <h3 class="widget-user-username">WictorP2</h3>
+                    <h5 class="widget-user-desc">2° colocado</h5>
+                  </div>
+                  <div class="card-footer p-0">
+                    <ul class="nav flex-column">
+                      <li class="nav-item">
+                          <span class="nav-link">CFSd <span class="float-right badge bg-primary">31</span></span>
+                      </li>
+                      <li class="nav-item">
+                        <span class="nav-link">CFC1 / CFC2 <span class="float-right badge bg-info">5</span></span>
+                      </li>
+                      <li class="nav-item">
+                        <span class="nav-link">CAP <span class="float-right badge bg-success">12</span></span>
+                      </li>
+                      <li class="nav-item">
+                        <span class="nav-link">Pontos <span class="float-right badge bg-danger">842</span></span>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <!-- /.widget-user -->
+              </div>
+              <!-- /.col -->
+              <div class="col-md-4">
+                <!-- Widget: user widget style 2 -->
+                <div class="card card-widget widget-user-2">
+                  <!-- Add the bg color to the header using any of the bg-* classes -->
+                  <div class="widget-user-header bg-warning">
+                    <div class="widget-user-image">
+                      <img class="" src="https://www.habbo.com.br/habbo-imaging/avatarimage?img_format=png&user=WictorP2&direction=2&head_direction=3&size=l&action=std" alt="User Avatar">
+                    </div>
+                    <!-- /.widget-user-image -->
+                    <h3 class="widget-user-username">WictorP2</h3>
+                    <h5 class="widget-user-desc">1° colocado</h5>
+                  </div>
+                  <div class="card-footer p-0">
+                    <ul class="nav flex-column">
+                      <li class="nav-item">
+                          <span class="nav-link">CFSd <span class="float-right badge bg-primary">31</span></span>
+                      </li>
+                      <li class="nav-item">
+                        <span class="nav-link">CFC1 / CFC2 <span class="float-right badge bg-info">5</span></span>
+                      </li>
+                      <li class="nav-item">
+                        <span class="nav-link">CAP <span class="float-right badge bg-success">12</span></span>
+                      </li>
+                      <li class="nav-item">
+                        <span class="nav-link">Pontos <span class="float-right badge bg-danger">842</span></span>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <!-- /.widget-user -->
+              </div>
+              <!-- /.col -->
+              <div class="col-md-4" style="margin-top:1em;">
+                <!-- Widget: user widget style 2 -->
+                <div class="card card-widget widget-user-2">
+                  <!-- Add the bg color to the header using any of the bg-* classes -->
+                  <div class="widget-user-header bg-orange">
+                    <div class="widget-user-image">
+                      <img class="" src="https://www.habbo.com.br/habbo-imaging/avatarimage?img_format=png&user=WictorP2&direction=2&head_direction=3&size=l&action=std" alt="User Avatar">
+                    </div>
+                    <!-- /.widget-user-image -->
+                    <h3 class="widget-user-username">WictorP2</h3>
+                    <h5 class="widget-user-desc">3° colocado</h5>
+                  </div>
+                  <div class="card-footer p-0">
+                    <ul class="nav flex-column">
+                      <li class="nav-item">
+                          <span class="nav-link">CFSd <span class="float-right badge bg-primary">31</span></span>
+                      </li>
+                      <li class="nav-item">
+                        <span class="nav-link">CFC1 / CFC2 <span class="float-right badge bg-info">5</span></span>
+                      </li>
+                      <li class="nav-item">
+                        <span class="nav-link">CAP <span class="float-right badge bg-success">12</span></span>
+                      </li>
+                      <li class="nav-item">
+                        <span class="nav-link">Pontos <span class="float-right badge bg-danger">842</span></span>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <!-- /.widget-user -->
+              </div>
+              <!-- /.col -->
+        </div>
+        <!-- /.row -->
+
+
+
+        <!-- /.Links rápidos e calendário -->
+        <div class="row">
+            <div class="col-md-6">
+                <div class="card">
+                    <div class="card-header bg-primary">
+                        <h3 class="card-title">Links rápidos</h3>
+                    </div>
+                    <div class="card-body">
+                        <ul class="nav flex-column">
+                            <li class="nav-item">
+                              <a href="#" class="nav-link">
+                                [INS] Regimento Interno <span class="float-right badge bg-primary">31/03/2023</span>
+                              </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#" class="nav-link">
+                                  [INS] Regimento Interno <span class="float-right badge bg-primary">31/03/2023</span>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#" class="nav-link">
+                                  [INS] Regimento Interno <span class="float-right badge bg-primary">31/03/2023</span>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#" class="nav-link">
+                                  [INS] Regimento Interno <span class="float-right badge bg-primary">31/03/2023</span>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#" class="nav-link">
+                                  [INS] Regimento Interno <span class="float-right badge bg-primary">31/03/2023</span>
+                                </a>
+                            </li>
+                          </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <!-- Calendar -->
+            <div class="card bg-gradient-success">
+                <div class="card-header border-0">
+  
+                  <h3 class="card-title">
+                    <i class="far fa-calendar-alt"></i>
+                    Calendar
+                  </h3>
+                  <!-- tools card -->
+                  <div class="card-tools">
+                    <!-- button with a dropdown -->
+                    <div class="btn-group">
+                      <button type="button" class="btn btn-success btn-sm dropdown-toggle" data-toggle="dropdown" data-offset="-52">
+                        <i class="fas fa-bars"></i>
+                      </button>
+                      <div class="dropdown-menu" role="menu">
+                        <a href="#" class="dropdown-item">Add new event</a>
+                        <a href="#" class="dropdown-item">Clear events</a>
+                        <div class="dropdown-divider"></div>
+                        <a href="#" class="dropdown-item">View calendar</a>
+                      </div>
+                    </div>
+                    <button type="button" class="btn btn-success btn-sm" data-card-widget="collapse">
+                      <i class="fas fa-minus"></i>
+                    </button>
+                    <button type="button" class="btn btn-success btn-sm" data-card-widget="remove">
+                      <i class="fas fa-times"></i>
+                    </button>
+                  </div>
+                  <!-- /. tools -->
+                </div>
+                <!-- /.card-header -->
+                <div class="card-body pt-0">
+                  <!--The calendar -->
+                  <div id="calendar" style="width: 100%"></div>
+                </div>
+                <!-- /.card-body -->
+              </div>
+            </div>
+        </div>
+
+
+        </div>
+      </div><!--/. container-fluid -->
+    </section>
+    <!-- /.content -->
+  </div>
+  <!-- /.content-wrapper -->
+
+  <!-- Control Sidebar -->
+  <aside class="control-sidebar control-sidebar-dark">
+    <!-- Control sidebar content goes here -->
+  </aside>
+  <!-- /.control-sidebar -->
+
+  <!-- Main Footer -->
+  <footer class="main-footer">
+    <strong>Copyright &copy; 2023-2023 <a href="https://adminlte.io">Companhia dos Instrutores</a>.</strong>
+    Todos os direitos reservados
+    <div class="float-right d-none d-sm-inline-block">
+      <b>Versão</b> 0.1
+    </div>
+  </footer>
+</div>
+<!-- ./wrapper -->
+
+<!-- REQUIRED SCRIPTS -->
+<!-- jQuery -->
+<script src="plugins/jquery/jquery.min.js"></script>
+<!-- Bootstrap -->
+<script src="plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+<!-- Bootstrap 4 -->
+<script src="plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+<!-- ChartJS -->
+<script src="plugins/chart.js/Chart.min.js"></script>
+<!-- Sparkline -->
+<script src="plugins/sparklines/sparkline.js"></script>
+<!-- JQVMap -->
+<script src="plugins/jqvmap/jquery.vmap.min.js"></script>
+<script src="plugins/jqvmap/maps/jquery.vmap.usa.js"></script>
+<!-- jQuery Knob Chart -->
+<script src="plugins/jquery-knob/jquery.knob.min.js"></script>
+<!-- daterangepicker -->
+<script src="plugins/moment/moment.min.js"></script>
+<script src="plugins/daterangepicker/daterangepicker.js"></script>
+<!-- Tempusdominus Bootstrap 4 -->
+<script src="plugins/tempusdominus-bootstrap-4/js/tempusdominus-bootstrap-4.min.js"></script>
+<!-- Summernote -->
+<script src="plugins/summernote/summernote-bs4.min.js"></script>
+<!-- overlayScrollbars -->
+<script src="plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js"></script>
+<!-- AdminLTE App -->
+<script src="dist/js/adminlte.js"></script>
+<!-- AdminLTE for demo purposes -->
+<script src="dist/js/demo.js"></script>
+<!-- AdminLTE dashboard demo (This is only for demo purposes) -->
+<script src="dist/js/pages/dashboard.js"></script>
+
+<script>  // The Calender
+    $('#calendar').datetimepicker({
+      format: 'L',
+      inline: true,
+      locale: 'br'
+    })</script>
+</body>
+</html>

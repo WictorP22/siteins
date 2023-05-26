@@ -1,0 +1,159 @@
+{% block headaer %}
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{% block title %}{% endblock %} - Instrutores</title>
+
+  <!-- Google Font: Source Sans Pro -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="{{ url_for('static', filename='plugins/fontawesome-free/css/all.min.css')}}">
+  <!-- overlayScrollbars -->
+  <link rel="stylesheet" href="{{ url_for('static', filename='plugins/overlayScrollbars/css/OverlayScrollbars.min.css')}}">
+  <!-- jQuery -->
+    <script src="{{ url_for('static', filename='plugins/jquery/jquery.min.js')}}"></script>
+  <!-- Theme style -->
+  <link rel="stylesheet" href="{{ url_for('static', filename='dist/css/adminlte.min.css')}}">
+  <script src="https://kit.fontawesome.com/151311a34e.js" crossorigin="anonymous')}}"></script>
+
+      <!-- ChartJS -->
+    <script src="{{ url_for('static', filename='plugins/chart.js/Chart.min.js')}}"></script>
+
+
+    <!-- Daterange picker -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='plugins/daterangepicker/daterangepicker.css')}}">
+    <style>
+      .img-project {
+        width: 3rem;
+    height: 3rem;
+    object-fit: none;
+    padding: 0.1rem;
+    object-position: center -20px;
+      }
+    </style>
+  <!-- jQuery -->
+</head>
+<body class="dark-mode layout-top-nav">
+<div class="wrapper">
+
+
+
+    <!-- Navbar -->
+    <nav class="main-header navbar navbar-expand-md navbar-dark navbar-dark">
+      <div class="container">
+        <a href="../../index3.html" class="navbar-brand">
+          <img src="https://www.habbo.com.br/habbo-imaging/badge/b09064s43131s50134s17113s171153f3edc7f555be912c2392e285b05bd34.gif" alt="Instrutores" class="brand-image img-circle elevation-3" style="opacity: .8">
+          <span class="brand-text font-weight-light">INS 2.0</span>
+        </a>
+
+        <button class="navbar-toggler order-1" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse order-3" id="navbarCollapse">
+          <!-- Left navbar links -->
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a href="/" class="nav-link">Início</a>
+            </li>
+            <li class="nav-item">
+              <a href="/documentos" class="nav-link">Documentos</a>
+            </li>
+            <li class="nav-item">
+              <a href="/anuncios" class="nav-link">Anúncios</a>
+            </li>
+          </ul>
+          <form method="get" action="/instrutor" class="float-left form-inline ml-0 ml-md-3">
+            <div class="input-group input-group-sm">
+              <input class="form-control form-control-navbar" name="policial" type="text" placeholder="Nick do Instrutor" aria-label="Nick do Instrutor">
+              <div class="input-group-append">
+                <button class="btn btn-navbar" type="submit">
+                  <i class="fas fa-search"></i>
+                </button>
+              </div>
+            </div>
+          </form>
+        </div>
+
+        <!-- Right navbar links -->
+        <ul class="order-1 order-md-3 navbar-nav navbar-no-expand ml-auto">
+          <!-- Notifications Dropdown Menu -->
+          <li class="nav-item dropdown">
+            <a class="nav-link" data-toggle="dropdown" href="#">
+              <i class="far fa-bell"></i>
+              <span class="badge badge-warning navbar-badge">15</span>
+            </a>
+            <div class="dropdown-menu dropdown-menu-lg dropdown-menu-right">
+              <span class="dropdown-header">15 Notifications</span>
+              <div class="dropdown-divider"></div>
+              <a href="#" class="dropdown-item">
+                <i class="fas fa-envelope mr-2"></i> 4 new messages
+                <span class="float-right text-muted text-sm">3 mins</span>
+              </a>
+              <div class="dropdown-divider"></div>
+              <a href="#" class="dropdown-item">
+                <i class="fas fa-users mr-2"></i> 8 friend requests
+                <span class="float-right text-muted text-sm">12 hours</span>
+              </a>
+              <div class="dropdown-divider"></div>
+              <a href="#" class="dropdown-item">
+                <i class="fas fa-file mr-2"></i> 3 new reports
+                <span class="float-right text-muted text-sm">2 days</span>
+              </a>
+              <div class="dropdown-divider"></div>
+              <a href="#" class="dropdown-item dropdown-footer">See All Notifications</a>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  {% endblock %}
+
+  {%- block content %}
+
+  {%- block footer %}
+
+      <!-- Control Sidebar -->
+      <aside class="control-sidebar control-sidebar-dark">
+        <!-- Control sidebar content goes here -->
+      </aside>
+      <!-- /.control-sidebar -->
+
+      <!-- Main Footer -->
+      <footer class="main-footer">
+        <strong>Copyright &copy; 2023-2023 <a href="https://adminlte.io">Companhia dos Instrutores</a>.</strong>
+        Todos os direitos reservados
+        <div class="float-right d-none d-sm-inline-block">
+          <b>Versão</b> 0.1
+        </div>
+      </footer>
+    <!-- REQUIRED SCRIPTS -->
+    <!-- Bootstrap -->
+    <script src="{{ url_for('static', filename='plugins/bootstrap/js/bootstrap.bundle.min.js')}}"></script>
+    <!-- Bootstrap 4 -->
+    <script src="{{ url_for('static', filename='plugins/bootstrap/js/bootstrap.bundle.min.js')}}"></script>
+    <!-- Sparkline -->
+    <script src="{{ url_for('static', filename='plugins/sparklines/sparkline.js')}}"></script>
+    <!-- JQVMap -->
+    <script src="{{ url_for('static', filename='plugins/jqvmap/jquery.vmap.min.js')}}"></script>
+    <script src="{{ url_for('static', filename='plugins/jqvmap/maps/jquery.vmap.usa.js')}}"></script>
+    <!-- jQuery Knob Chart -->
+    <script src="{{ url_for('static', filename='plugins/jquery-knob/jquery.knob.min.js')}}"></script>
+    <!-- daterangepicker -->
+    <script src="{{ url_for('static', filename='plugins/moment/moment.min.js')}}"></script>
+    <script src="{{ url_for('static', filename='plugins/daterangepicker/daterangepicker.js')}}"></script>
+    <!-- Tempusdominus Bootstrap 4 -->
+    <script src="{{ url_for('static', filename='plugins/tempusdominus-bootstrap-4/js/tempusdominus-bootstrap-4.min.js')}}"></script>
+    <!-- Summernote -->
+    <script src="{{ url_for('static', filename='plugins/summernote/summernote-bs4.min.js')}}"></script>
+    <!-- overlayScrollbars -->
+    <script src="{{ url_for('static', filename='plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js')}}"></script>
+    <!-- AdminLTE App -->
+    <script src="{{ url_for('static', filename='dist/js/adminlte.js')}}"></script>
+      <script src="https://momentjs.com/downloads/moment-with-locales.js"></script>
+    </body>
+    </html>
+  {%- endblock footer %}
+{%- endblock content %}
