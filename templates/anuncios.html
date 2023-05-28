@@ -2,6 +2,10 @@
 
 {% block header %}
   <h1>{% block title %}Anuncios - {% endblock %}</h1>
+{% block script %}
+    {{ super() }}
+    {{ moment.include_moment() }}
+{% endblock %}
 {% endblock %}
 
 {% block content %}
@@ -10,12 +14,15 @@
       <div class="content">
         <div class="container">
 
-            <h3 class="mt-4 mb-4">Anúncios e atas</h3>
+            <h3 class="mt-4 mb-4">
+              {% for anuncio in anuncios %}
+              {% endfor %}
+            </h3>
             <div class="row">
                 <div class="col-md-3">
                     <div class="card">
                         <div class="card-header">
-                          <h3 class="card-title">Filtros</h3>
+                          <h3 class="card-title">Legenda</h3>
 
                           <div class="card-tools">
                             <button type="button" class="btn btn-tool" data-card-widget="collapse">
@@ -50,58 +57,31 @@
                 <div class="col-md-9">
                     <div class="card card-warning card-outline">
                         <div class="card-header">
-                          <h3 class="card-title">Pesquisa</h3>
-
-                          <div class="card-tools">
-                            <div class="input-group input-group-sm">
-                              <input type="text" class="form-control" placeholder="Nick do Instrutor Mail">
-                              <div class="input-group-append">
-                                <div class="btn btn-primary">
-                                  <i class="fas fa-Nick do Instrutor"></i>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                          <!-- /.card-tools -->
+                          <h3 class="card-title">Anúncios</h3>
                         </div>
                         <!-- /.card-header -->
                         <div class="card-body p-0">
                           <div class="table-responsive mailbox-messages">
                             <table class="table table-hover table-striped">
                               <tbody>
-                              <tr>
-                                <td class="mailbox-star"><a href="#"><i class="far fa-circle text-primary"></i></a></td>
-                                <td class="mailbox-name"><a href="read-mail.html">Alexander Pierce</a></td>
-                                <td class="mailbox-subject"><b>AdminLTE 3.0 Issue</b> - Trying to find a solution to this problem...
-                                </td>
-                                <td class="mailbox-attachment"></td>
-                                <td class="mailbox-date">5 mins ago</td>
-                              </tr>
-                              <tr>
-                                <td class="mailbox-star"><a href="#"><i class="far fa-circle text-warning"></i></a></td>
-                                <td class="mailbox-name"><a href="read-mail.html">Alexander Pierce</a></td>
-                                <td class="mailbox-subject"><b>AdminLTE 3.0 Issue</b> - Trying to find a solution to this problem...
-                                </td>
-                                <td class="mailbox-attachment"><i class="fas fa-paperclip"></i></td>
-                                <td class="mailbox-date">28 mins ago</td>
-                              </tr>
-                              <tr>
+                              {% for anuncio in anuncios %}
 
-                                <td class="mailbox-star"><a href="#"><i class="far fa-circle text-danger"></i></a></td>
-                                <td class="mailbox-name"><a href="read-mail.html">Alexander Pierce</a></td>
-                                <td class="mailbox-subject"><b>AdminLTE 3.0 Issue</b> - Trying to find a solution to this problem...
-                                </td>
-                                <td class="mailbox-attachment"><i class="fas fa-paperclip"></i></td>
-                                <td class="mailbox-date">11 hours ago</td>
-                              </tr>
                               <tr>
-                                <td class="mailbox-star"><a href="#"><i class="far fa-circle text-danger"></i></a></td>
-                                <td class="mailbox-name"><a href="read-mail.html">Alexander Pierce</a></td>
-                                <td class="mailbox-subject"><b>AdminLTE 3.0 Issue</b> - Trying to find a solution to this problem...
+                                <td class="mailbox-star">
+                                  {% if anuncio.Tipo == 'anuncio' %}
+                                  <i class="far fa-circle text-danger"></i>
+                                  {% elif anuncio.Tipo == 'rápido' %}
+                                  <i class="far fa-circle text-warning"></i>
+                                  {% elif anuncio.Tipo == 'ata' %}
+                                  <i class="far fa-circle text-primary"></i>
+                                  {% endif %}
                                 </td>
-                                <td class="mailbox-attachment"></td>
-                                <td class="mailbox-date">15 hours ago</td>
+                                <td class="mailbox-name"><a href="http://127.0.0.1:5000/anuncio/{{anuncio.Id}}">{{ anuncio.Title }}</a></td>
+                                <td class="mailbox-attachment">{{moment.locale('pt-br') }} {{ moment(anuncio.Atualização).fromNow() }}</td>
+                                <td class="mailbox-date"></td>
                               </tr>
+
+                              {% endfor %}
                               </tbody>
                             </table>
                             <!-- /.table -->
@@ -120,4 +100,8 @@
   </div>
   <!-- /.content-wrapper -->
 {{ super() }}
+
+<script>
+</script>
+
 {%- endblock content %}

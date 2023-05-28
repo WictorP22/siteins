@@ -20,25 +20,28 @@
                   <!-- Add the bg color to the header using any of the bg-* classes -->
                   <div class="widget-user-header bg-gray">
                     <div class="widget-user-image">
-                      <img class="" src="https://www.habbo.com.br/habbo-imaging/avatarimage?img_format=png&user=WictorP2&direction=2&head_direction=3&size=l&action=std" alt="User Avatar">
+                      <img class="" src="https://www.habbo.com.br/habbo-imaging/avatarimage?img_format=png&user={{podio[1].Nick}}&direction=2&head_direction=3&size=l&action=std" alt="User Avatar">
                     </div>
                     <!-- /.widget-user-image -->
-                    <h3 class="widget-user-username">WictorP2</h3>
+                    <h3 class="widget-user-username">{{podio[1].Nick}}</h3>
                     <h5 class="widget-user-desc">2° colocado</h5>
                   </div>
                   <div class="card-footer p-0">
                     <ul class="nav flex-column">
                       <li class="nav-item">
-                          <span class="nav-link">CFSd <span class="float-right badge bg-primary">31</span></span>
+                          <span class="nav-link">CFSd <span class="float-right badge bg-primary">{{podio[1].CFSd}}</span></span>
                       </li>
                       <li class="nav-item">
-                        <span class="nav-link">CFC1 / CFC2 <span class="float-right badge bg-info">5</span></span>
+                        <span class="nav-link">CFC1 <span class="float-right badge bg-info">{{podio[1].CFC1}}</span></span>
                       </li>
                       <li class="nav-item">
-                        <span class="nav-link">CAP <span class="float-right badge bg-success">12</span></span>
+                        <span class="nav-link">CFC2 <span class="float-right badge bg-info">{{podio[1].CFC2}}</span></span>
                       </li>
                       <li class="nav-item">
-                        <span class="nav-link">Pontos <span class="float-right badge bg-danger">842</span></span>
+                        <span class="nav-link">CAP <span class="float-right badge bg-success">{{podio[1].CAP}}</span></span>
+                      </li>
+                      <li class="nav-item">
+                        <span class="nav-link">Pontos <span class="float-right badge bg-danger">{{podio[1].Pontos}}</span></span>
                       </li>
                     </ul>
                   </div>
@@ -52,25 +55,28 @@
                   <!-- Add the bg color to the header using any of the bg-* classes -->
                   <div class="widget-user-header bg-warning">
                     <div class="widget-user-image">
-                      <img class="" src="https://www.habbo.com.br/habbo-imaging/avatarimage?img_format=png&user=WictorP2&direction=2&head_direction=3&size=l&action=std" alt="User Avatar">
+                      <img class="" src="https://www.habbo.com.br/habbo-imaging/avatarimage?img_format=png&user={{podio[0].Nick}}&direction=2&head_direction=3&size=l&action=std" alt="User Avatar">
                     </div>
                     <!-- /.widget-user-image -->
-                    <h3 class="widget-user-username">WictorP2</h3>
+                    <h3 class="widget-user-username">{{podio[0].Nick}}</h3>
                     <h5 class="widget-user-desc">1° colocado</h5>
                   </div>
                   <div class="card-footer p-0">
                     <ul class="nav flex-column">
                       <li class="nav-item">
-                          <span class="nav-link">CFSd <span class="float-right badge bg-primary">31</span></span>
+                          <span class="nav-link">CFSd <span class="float-right badge bg-primary">{{podio[0].CFSd}}</span></span>
                       </li>
                       <li class="nav-item">
-                        <span class="nav-link">CFC1 / CFC2 <span class="float-right badge bg-info">5</span></span>
+                        <span class="nav-link">CFC1 <span class="float-right badge bg-info">{{podio[0].CFC1}}</span></span>
                       </li>
                       <li class="nav-item">
-                        <span class="nav-link">CAP <span class="float-right badge bg-success">12</span></span>
+                        <span class="nav-link">CFC2 <span class="float-right badge bg-info">{{podio[0].CFC2}}</span></span>
                       </li>
                       <li class="nav-item">
-                        <span class="nav-link">Pontos <span class="float-right badge bg-danger">842</span></span>
+                        <span class="nav-link">CAP <span class="float-right badge bg-success">{{podio[0].CAP}}</span></span>
+                      </li>
+                      <li class="nav-item">
+                        <span class="nav-link">Pontos <span class="float-right badge bg-danger">{{podio[0].Pontos}}</span></span>
                       </li>
                     </ul>
                   </div>
@@ -84,25 +90,28 @@
                   <!-- Add the bg color to the header using any of the bg-* classes -->
                   <div class="widget-user-header bg-orange">
                     <div class="widget-user-image">
-                      <img class="" src="https://www.habbo.com.br/habbo-imaging/avatarimage?img_format=png&user=WictorP2&direction=2&head_direction=3&size=l&action=std" alt="User Avatar">
+                      <img class="" src="https://www.habbo.com.br/habbo-imaging/avatarimage?img_format=png&user={{podio[2].Nick}}&direction=2&head_direction=3&size=l&action=std" alt="User Avatar">
                     </div>
                     <!-- /.widget-user-image -->
-                    <h3 class="widget-user-username">WictorP2</h3>
+                    <h3 class="widget-user-username">{{podio[2].Nick}}</h3>
                     <h5 class="widget-user-desc">3° colocado</h5>
                   </div>
                   <div class="card-footer p-0">
                     <ul class="nav flex-column">
                       <li class="nav-item">
-                          <span class="nav-link">CFSd <span class="float-right badge bg-primary">31</span></span>
+                          <span class="nav-link">CFSd <span class="float-right badge bg-primary">{{podio[2].CFSd}}</span></span>
                       </li>
                       <li class="nav-item">
-                        <span class="nav-link">CFC1 / CFC2 <span class="float-right badge bg-info">5</span></span>
+                        <span class="nav-link">CFC1 <span class="float-right badge bg-info">{{podio[2].CFC1}}</span></span>
                       </li>
                       <li class="nav-item">
-                        <span class="nav-link">CAP <span class="float-right badge bg-success">12</span></span>
+                        <span class="nav-link">CFC2 <span class="float-right badge bg-info">{{podio[2].CFC2}}</span></span>
                       </li>
                       <li class="nav-item">
-                        <span class="nav-link">Pontos <span class="float-right badge bg-danger">842</span></span>
+                        <span class="nav-link">CAP <span class="float-right badge bg-success">{{podio[2].CAP}}</span></span>
+                      </li>
+                      <li class="nav-item">
+                        <span class="nav-link">Pontos <span class="float-right badge bg-danger">{{podio[2].Pontos}}</span></span>
                       </li>
                     </ul>
                   </div>
@@ -113,90 +122,6 @@
         </div>
         <!-- /.row -->
 
-
-
-        <!-- /.Links rápidos e calendário -->
-        <div class="row">
-            <div class="col-md-6">
-                <div class="card">
-                    <div class="card-header bg-primary">
-                        <h3 class="card-title">Links rápidos</h3>
-                    </div>
-                    <div class="card-body">
-                        <ul class="nav flex-column">
-                            <li class="nav-item">
-                              <a href="#" class="nav-link">
-                                [INS] Regimento Interno <span class="float-right badge bg-primary">31/03/2023</span>
-                              </a>
-                            </li>
-                            <li class="nav-item">
-                                <a href="#" class="nav-link">
-                                  [INS] Regimento Interno <span class="float-right badge bg-primary">31/03/2023</span>
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a href="#" class="nav-link">
-                                  [INS] Regimento Interno <span class="float-right badge bg-primary">31/03/2023</span>
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a href="#" class="nav-link">
-                                  [INS] Regimento Interno <span class="float-right badge bg-primary">31/03/2023</span>
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a href="#" class="nav-link">
-                                  [INS] Regimento Interno <span class="float-right badge bg-primary">31/03/2023</span>
-                                </a>
-                            </li>
-                          </ul>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-6">
-                <!-- Calendar -->
-            <div class="card bg-gradient-success">
-                <div class="card-header border-0">
-
-                  <h3 class="card-title">
-                    <i class="far fa-calendar-alt"></i>
-                    Calendar
-                  </h3>
-                  <!-- tools card -->
-                  <div class="card-tools">
-                    <!-- button with a dropdown -->
-                    <div class="btn-group">
-                      <button type="button" class="btn btn-success btn-sm dropdown-toggle" data-toggle="dropdown" data-offset="-52">
-                        <i class="fas fa-bars"></i>
-                      </button>
-                      <div class="dropdown-menu" role="menu">
-                        <a href="#" class="dropdown-item">Add new event</a>
-                        <a href="#" class="dropdown-item">Clear events</a>
-                        <div class="dropdown-divider"></div>
-                        <a href="#" class="dropdown-item">View calendar</a>
-                      </div>
-                    </div>
-                    <button type="button" class="btn btn-success btn-sm" data-card-widget="collapse">
-                      <i class="fas fa-minus"></i>
-                    </button>
-                    <button type="button" class="btn btn-success btn-sm" data-card-widget="remove">
-                      <i class="fas fa-times"></i>
-                    </button>
-                  </div>
-                  <!-- /. tools -->
-                </div>
-                <!-- /.card-header -->
-                <div class="card-body pt-0">
-                  <!--The calendar -->
-                  <div id="calendar" style="width: 100%"></div>
-                </div>
-                <!-- /.card-body -->
-              </div>
-            </div>
-        </div>
-
-
-        </div>
       </div><!--/. container-fluid -->
     </section>
 
