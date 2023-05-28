@@ -96,5 +96,4 @@ def consulta_instrutor(id):
 
 #colocar site no ar
 if __name__ == "__main__":
-    anuncios_blogger()
     app.run(debug=True)
